@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Yifei  Li | Procedural Grass in Call of Duty</title>
+<meta name="description" content="First-year EECS PhD student at MIT.">
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/projects/ProceduralGrass/">
+
+<!-- Open Graph -->
+
+<meta property="og:site_name" content="First-year EECS PhD student at MIT." />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="" />
+<meta property="og:url" content="https://omegaiota.github.io/projects/ProceduralGrass/" />
+<meta property="og:description" content="Procedural Grass in Call of Duty" />
+<meta property="og:image" content="" />
+
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Procedural Grass in Call of Duty | Yifei Li</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Procedural Grass in Call of Duty" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A procedural grass system that I implemented for Call of Duty Black Ops 4 in Summer 2018" />
+<meta property="og:description" content="A procedural grass system that I implemented for Call of Duty Black Ops 4 in Summer 2018" />
+<link rel="canonical" href="https://omegaiota.github.io/projects/ProceduralGrass/" />
+<meta property="og:url" content="https://omegaiota.github.io/projects/ProceduralGrass/" />
+<meta property="og:site_name" content="Yifei Li" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-16T12:26:45-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Procedural Grass in Call of Duty" />
+<script type="application/ld+json">
+{"dateModified":"2021-06-16T12:26:45-04:00","datePublished":"2021-06-16T12:26:45-04:00","description":"A procedural grass system that I implemented for Call of Duty Black Ops 4 in Summer 2018","mainEntityOfPage":{"@type":"WebPage","@id":"https://omegaiota.github.io/projects/ProceduralGrass/"},"url":"https://omegaiota.github.io/projects/ProceduralGrass/","@type":"BlogPosting","headline":"Procedural Grass in Call of Duty","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://omegaiota.github.io/">
+       <span class="font-weight-bold">Yifei</span>   Li
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              About
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/gallery/">
+                Gallery
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                Projects
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                Publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Procedural Grass in Call of Duty</h1>
+    <p class="post-description">A procedural grass system that I implemented for Call of Duty Black Ops 4 in Summer 2018</p>
+  </header>
+      <!-- JS -->
+    <script src="https://omegaiota.github.io/assets/js/jquery-1.12.0.min.js"></script>
+    <script src="https://omegaiota.github.io/assets/js/jquery.dlmenu.min.js"></script>
+    <script src="https://omegaiota.github.io/assets/js/jquery.goup.min.js"></script>
+    <script src="https://omegaiota.github.io/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://omegaiota.github.io/assets/js/jquery.fitvid.min.js"></script>
+    <script src="https://omegaiota.github.io/assets/js/scripts.js"></script>
+    
+
+  <article>
+    <p>I interned at Activision’s office in Portland, Maine (ACME) in Summer 2018 and implemented a procedural grass system for <a href="https://www.callofduty.com/blackops4">Call of Duty : Black Ops 4</a>’s battle royale mode. Procedural grass is shipped with BO4 across all platforms in October 2018.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/projects/grass/down-Lake%201.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Rendered procedural grass in game.
+</div>
+
+<div class="row justify-content-sm-center">
+    <iframe class="rounded z-depth-1" width="560" height="315" src="//www.youtube.com/embed/FXXzZuo9TPc" frameborder="0"> </iframe>
+
+</div>
+<div class="caption">
+    A demo video that showcases the LOD transition, color cache and parameterization of the grass, among other things that I implemented.
+</div>
+
+<h1 id="why-procedural-grass">Why Procedural Grass?</h1>
+<p>As opposed to static grass where a grass texture is applied on a “card-like” model, procedural grass is fully programmed and rendered as a collection of triangles. Procedural grass is flexible in its look, and have huge potentials in improving the rendering time, which is crucial in a FPS game like COD. The deployment of grass in game is also fully programmed, so that artists don’t need to place static grass models in game one-by-one. Advanced animations on grass, such as swinging or burning also become a possibility.</p>
+
+<h1 id="super-terrain-system">Super Terrain System</h1>
+<p>The procedural grass system is implemented as a sub-system inside the super terrain system of this COD blackout engine. This allows grass-related computations to take-advantage of the terrain information underneath. For example, the color of the grass can be dynamically determined according to the terrain type. On a lawn the grass can be green, whereas near a gravel field grass can adopt a less vibrant color to match the atmosphere.</p>
+
+<h1 id="geometric-representation">Geometric Representation</h1>
+<p>Each grass blade is represented using a collection of triangles. There are three level of details for grass blades. The highest LOD has blades made up of 7 vertices, followed by LOD 1 with 5 vertices and LOD 2 with 3 vertices.</p>
+
+<div class="row justify-content-sm-center">
+ <img class="img-fluid rounded z-depth-1" src="/assets/projects/grass/bladeLod.svg?sanitize=1" alt="" title="example image" />
+</div>
+
+<p>Different LOD levels are used depending on the grass blade’s distance to the camera to save performance. Near camera, LOD 0 is used to provide best visual look. Higher LOD levels kick in as distance increases since the grass blades occupy much less space (even less then a pixel) on screen.</p>
+
+<h1 id="vertex-data">Vertex Data</h1>
+<p>To give grass a randomized look, each grass blade is attached with some random numbers generated on CPU during buffer initialization. Two of these random numbers are used to determine grass’s position in the underlying terrain tile. The remaining five random numbers are used to vary grass blade height, width and bend. In the first implementation, these numbers are copied for vertices on the same blade. During optimization phase, These random numbers are moved to a byte buffer to save space usage.</p>
+
+<h1 id="sliding-grass-vertex--index-buffer">Sliding Grass Vertex / Index Buffer</h1>
+<p>To have a smoothly blend the three LOD levels together, we can’t use a hard cutoff threshold for LDO transitions, since it creates two visible grass quality degrade on screen.</p>
+
+<p>Instead, a sliding grass vertex buffer is used to seamlessly blend the three LOD levels. The sliding buffer is a buffer with mixing LOD grass blade data with a higher percentage of LOD0 grass blades at the beginning and LOD3 grass blades at the end. A sliding window is used to determine grass blade type for each grass patch. The head of the buffer is used if the patch is close to camera, and vice versa.</p>
+
+<h1 id="grass-draw-emit">Grass Draw Emit</h1>
+<p>During the quad tree traversal of the super terrain, a terrain tile draw is followed by a grass draw. View frustum culls are performed to avoid submitting grass patch that are not in view, which saves performance. Each grass draw corresponds to a grass patch on a terrain tile.</p>
+
+<h1 id="grass-color-cache">Grass Color Cache</h1>
+<p>Each grass blades repeats the color computation of the underlying super terrain to match the atmosphere of the environment. However, because each grass vertex of a blade is independently processed on the GPU, the same computation is repeated for all the vertices on a blade. And since nearby grass blades usually adopt the same color, the computation waste is even larger. To save the computation, a grass color cache is computed at the beginning of each frame, which samples a low resolution of the terrain color in camera. Grass vertices can then directly sample from this texture. Since grass color computation is the most computation-intensive part of procedural grass, this brings a huge performance gain to the module.</p>
+
+<p>Even better, the computation of the grass color texture has room for optimization. Note that when a user moves, only the peripheral part of the camera has scene changes, and a huge portion of the previous frame computation can be re-used. Using a special coordinate system trick, this optimization was succesfully realized.</p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2021 Yifei  Li.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+
+    
+    Last updated: June 16, 2021.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Load Core and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.0/umd/popper.min.js" integrity="sha256-OH05DFHUWzr725HmuHo3pnuvUUn+TJuj8/Qz9xytFEw=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/js/mdb.min.js"  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha256-F/Xda58SPdcUCr+xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+<!-- Load Mansory & imagesLoaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<!-- Project Cards Layout -->
+<script type="text/javascript">
+  // Init Masonry
+  var $grid = $('.grid').masonry({
+    gutter: 10,
+    horizontalOrder: true,
+    itemSelector: '.grid-item',
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
+</script>
+
+
+
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-131144885-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+</html>
